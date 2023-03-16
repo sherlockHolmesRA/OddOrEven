@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.0.4</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.nombresPairesImpaires</groupId>
 	<artifactId>nombresPairesImpaires</artifactId>
@@ -15,15 +16,17 @@
 	<description>nombresPairesImpaires</description>
 	<properties>
 		<java.version>17</java.version>
-		
-		    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <sonar.host.url>http://www.example.com/</sonar.host.url>
-    <sonar.jdbc.url>jdbc:postgresql://www.example.com/sonar</sonar.jdbc.url>
-    <sonar.jdbc.driver>org.postgresql.Driver</sonar.jdbc.driver>
-    <sonar.jdbc.username>sonar</sonar.jdbc.username>
-    <sonar.jdbc.password>sonar</sonar.jdbc.password>
-    <sonar.exclusions>org/binarytherapy/generated/**/*, **/GuiceBindComposer.java</sonar.exclusions>
-    <sonar.dynamic>reuseReports</sonar.dynamic>
+<!--  
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<sonar.host.url>http://www.example.com/</sonar.host.url>
+		<sonar.jdbc.url>jdbc:postgresql://www.example.com/sonar</sonar.jdbc.url>
+		<sonar.jdbc.driver>org.postgresql.Driver</sonar.jdbc.driver>
+		<sonar.jdbc.username>sonar</sonar.jdbc.username>
+		<sonar.jdbc.password>sonar</sonar.jdbc.password>
+		<sonar.exclusions>org/binarytherapy/generated/**/*,
+			**/GuiceBindComposer.java</sonar.exclusions>
+		<sonar.dynamic>reuseReports</sonar.dynamic>
+-->		
 	</properties>
 	<dependencies>
 		<dependency>
