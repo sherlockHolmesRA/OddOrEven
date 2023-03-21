@@ -57,10 +57,8 @@ public class NombresPairesImpairesApplication {
 		evenNumbersTable(numbs);
 		
 		
-		// print odd and even numbers from a Set
+		// print odd and even numbers from a Set	
 		Set<Integer> numbersSet = new HashSet<>(numbers);
-		Set<Integer> numbersSet2 = numbers.stream().distinct().
-                collect(Collectors.toSet());
 		
 		Set<Integer> oddsSet = oddNumbersSet(numbersSet);
 		System.out.println("Odd numbers Set: " + oddsSet); 
@@ -70,6 +68,9 @@ public class NombresPairesImpairesApplication {
 		
 		System.out.println("set of Even and Odd numbers using stream:");
 		
+		// print odd and even numbers from a Set using Stream
+		Set<Integer> numbersSet2 = numbers.stream().distinct().
+                collect(Collectors.toSet());
 		Set<Integer> oddsSet2 = oddNumbersSet(numbersSet2);
 		System.out.println("Odd numbers Set: " + oddsSet2); 
 			
