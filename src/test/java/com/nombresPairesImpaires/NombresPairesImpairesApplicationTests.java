@@ -12,7 +12,6 @@ import java.util.List;
 import java.util.Set;
 
 import org.junit.jupiter.api.Test;
-import org.mockito.internal.matchers.Contains;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
@@ -20,7 +19,7 @@ class NombresPairesImpairesApplicationTests {
 	
 	//private NombresPairesImpairesApplication nombresPairesImpaires = new NombresPairesImpairesApplication();
 
-	
+	// test odd and even numbers from a List
 	@Test
 	public void testOddNumbers() {
 		List<Integer> numbers = Arrays.asList(1, 4, 8, 40, 11, 22, 33, 99);
@@ -47,7 +46,7 @@ class NombresPairesImpairesApplicationTests {
 		assertNotEquals(ints, NombresPairesImpairesApplication.listEvenNumbers(numbers));
 	}	
 	
-	
+	// test if the number is odd or even
 	@Test
 	public void testIsOdd() {
 		int e = 5;
@@ -71,6 +70,7 @@ class NombresPairesImpairesApplicationTests {
 	}
 	
 	
+	// test odd and even numbers from a Set
 	@Test
 	public void testSetOfOddNumbers() {
 		List<Integer> numbers = Arrays.asList(1, 4, 8, 40, 51, 11, 22, 33, 99, 51, 32);
@@ -109,4 +109,50 @@ class NombresPairesImpairesApplicationTests {
 		//assertNotEquals(intsSet, NombresPairesImpairesApplication.evenNumbersSet(numbersSet));
 	}	
 
+	// test odd and even numbers from an array
+	@Test
+	public void testOddNumbersTable() {
+		List<Integer> numbers = Arrays.asList(1, 4, 8, 40, 51, 11, 22, 33, 99, 51, 32);
+		List<Integer> ints = Arrays.asList(1, 11, 33, 99, 51);
+		Integer[] numbs = new Integer[numbers.size()];
+		numbs = numbers.toArray(numbs);
+		Integer[] integ = new Integer[ints.size()];
+		numbs = ints.toArray(integ);
+		NombresPairesImpairesApplication.oddNumbersTable(numbs);
+		assertEquals(integ, numbs);
+	}
+	@Test
+	public void testNotOddNumbersTable() {
+		List<Integer> numbers = Arrays.asList(1, 4, 8, 40, 51, 11, 22, 33, 99, 51, 32);
+		List<Integer> ints = Arrays.asList(4, 8, 40, 8, 22);
+		Integer[] numbs = new Integer[numbers.size()];
+		numbs = numbers.toArray(numbs);
+		Integer[] integ = new Integer[ints.size()];
+		numbs = ints.toArray(integ);
+		NombresPairesImpairesApplication.oddNumbersTable(numbs);
+		assertEquals(integ, numbs);
+	}
+	
+	@Test
+	public void testEvenNumbersTable() {
+		List<Integer> numbers = Arrays.asList(1, 4, 8, 40, 51, 11, 22, 33, 99, 51, 32);
+		List<Integer> ints = Arrays.asList(4, 8, 40, 8, 22);
+		Integer[] numbs = new Integer[numbers.size()];
+		numbs = numbers.toArray(numbs);
+		Integer[] integ = new Integer[ints.size()];
+		numbs = ints.toArray(integ);
+		NombresPairesImpairesApplication.evenNumbersTable(numbs);
+		assertEquals(integ, numbs);
+	}	
+	@Test
+	public void testNotEvenNumbersTable() {
+		List<Integer> numbers = Arrays.asList(1, 4, 8, 40, 51, 11, 22, 33, 99, 51, 32);
+		List<Integer> ints = Arrays.asList(1, 11, 33, 99, 51);
+		Integer[] numbs = new Integer[numbers.size()];
+		numbs = numbers.toArray(numbs);
+		Integer[] integ = new Integer[ints.size()];
+		numbs = ints.toArray(integ);
+		NombresPairesImpairesApplication.evenNumbersTable(numbs);
+		assertEquals(integ, numbs);
+	}	
 }

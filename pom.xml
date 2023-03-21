@@ -16,7 +16,7 @@
 	<description>nombresPairesImpaires</description>
 	<properties>
 		<java.version>17</java.version>
-<!--  
+<!-- 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<sonar.host.url>http://www.example.com/</sonar.host.url>
 		<sonar.jdbc.url>jdbc:postgresql://www.example.com/sonar</sonar.jdbc.url>
